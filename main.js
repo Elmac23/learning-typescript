@@ -7,6 +7,7 @@ button === null || button === void 0 ? void 0 : button.addEventListener("click",
     console.log(handleClick(+inputOne.value, +inputTwo.value) + "");
     if (result) {
         result.textContent = handleClick(+inputOne.value, +inputTwo.value) + "";
+        alert("stary na rowerku");
     }
     else {
         alert("hehehe");
