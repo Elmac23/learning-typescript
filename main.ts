@@ -10,6 +10,7 @@ button?.addEventListener("click", () => {
 
   if (result) {
     result.textContent = handleClick(+inputOne.value, +inputTwo.value) + "";
+    alert("stary na rowerku");
   } else {
     alert("hehehe");
   }
