@@ -15,3 +15,32 @@ button?.addEventListener("click", () => {
     alert("hehehe");
   }
 });
+
+function getRandomInt(min: number, max: number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function id<T extends { new (...args: any[]): {} }>(target: T) {
+  return class extends target {
+    id = getRandomInt(50, 1000);
+  };
+}
+
+function log(construtor: Function) {
+  console.log(construtor);
+}
+
+@log
+@id
+class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+const PersonOne = new Person("Andrew");
+
+//console.log(PersonOne);
