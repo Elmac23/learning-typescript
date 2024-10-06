@@ -30,6 +30,7 @@ function id<T extends { new (...args: any[]): {} }>(target: T) {
 
 function log(construtor: Function) {
   console.log(construtor);
+  console.log("hej");
 }
 
 @log
